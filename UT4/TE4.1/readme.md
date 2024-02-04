@@ -17,7 +17,6 @@
 
 ```
 git branch -m main
-
 ```
 
 5. Agrega un fichero `README.md`.
@@ -32,14 +31,12 @@ git branch -m main
 
 ```
 git add readme.md
-
 ```
 
 7. Realiza un commit con el mensaje "Add README". ¿Qué comando/s utilizas?
 
 ```
 git commit -m "Add readme"
-
 ```
 
 8. Agrega otro fichero `01.xml` con siguiente texto.
@@ -63,21 +60,18 @@ git commit -m "Add readme"
 ```
 git add 01.xml
 git commit -m "Add file 01.xml"
-
 ```
 
 10. Agrega una nueva rama llamada y posicionate directamente en ella con el mismo comando `fea/wac01`. ¿Qué comando/s utilizas? (busca en internet si no lo recuerdas)
 
 ```
 git checkout -b fea/wac01
-
 ```
 
 11. En qué rama estas ahora mismo? ¿Qué comando/s utilizas?
 
 ```
 git branch
-
 ```
 
 12. Estando en la rama `fea/wac01` agrega un fichero `02.xml, y agrega al área de stage y realiza commit "Add file 02".
@@ -99,14 +93,12 @@ git branch
 ```
 git add 02.xml
 git commit -m "Add file 02.xml"
-
 ```
 
 13. Muestra el log utilizando solo una línea por commit con opciones gráficas. ¿Qué comando/s utilizas?
 
 ```
 git log --oneline --graph
-
 ```
 
 14. Posicionate de nuevo en la rama `main`, y crea otra rama `fea/wac02`, posicionandote direcamente en ella. Agrega un fichero `03.xml`, agrega al área de stage y realiza commit "Add file 03".
@@ -125,10 +117,10 @@ git log --oneline --graph
     </libreria>
     ```
 
+
 ```
 git checkout main
 git checkout -b fea/wac02
-
 ```
 
 15. Posicionate en la rama `main` y muestra los ficheros que hay en el directorio. ¿Qué comando/s utilizas?
@@ -136,7 +128,6 @@ git checkout -b fea/wac02
 ```
 git checkout main
 ls
-
 ```
 
 16. Realizar un merge de la rama `fea/wac01` en la rama `main`. (Indica los comandos utilizados y explica cada uno de ellos).
@@ -162,17 +153,13 @@ Este comando realiza el commit final para confirmar el merge.
 
 17. Muestra el estado del repositorio, el log, y los ficheros que hay en el directorio. (Imagen/gif visualizando los comandos).
 
-```
--git status
--git log --oneline --graph
--ls
-```
+![.](img/ej17.jpg)
+
 
 18. Elimina la rama `fea/wac01` sin posibilidad de recuperación. ¿Qué comando/s utilizas?
 
 ```
 git branch -D fea/wac01
-
 ```
 
 19. Realiza un merge de la rama `fea/wac02` en la rama `main`.
@@ -180,22 +167,13 @@ git branch -D fea/wac01
 ```
 -git checkout main
 -git merge fea/wac02
-
 ```
 
 20. Muestra el estado del repositorio, el log, y los ficheros que hay en el directorio. (Imagen)
 
-```
-# Mostrar estado del repositorio
--git status
 
-# Mostrar historial de commits con opciones gráficas
--git log --oneline --graph
+![.](img/ej20.jpg)
 
-# Listar los archivos y directorios en el directorio actual
--ls
-
-```
 
 21. Vuelve a la rama `fea/wac02` y modifica el fichero `03.xml` añadiendo un nuevo libro.
 
@@ -223,10 +201,55 @@ git branch -D fea/wac01
 
     Agrega al área de stage y realiza commit "Update 03 file. Add book El Silmarillion".
 
+    ```
+    git checkout fea/wac02
+    
+<?xml version="1.0" encoding="UTF-8"?>
+    <libreria>
+        <libro>
+            <titulo>El Señor de los Anillos</titulo>
+            <autor>J.R.R. Tolkien</autor>
+            <editorial>Minotauro</editorial>
+            <fecha>1954</fecha>
+            <genero>Fantasía</genero>
+            <precio>25</precio>
+        </libro>
+        <libro>
+            <titulo>El Silmarillion</titulo>
+            <autor>J.R.R. Tolkien</autor>
+            <editorial>Minotauro</editorial>
+            <fecha>1977</fecha>
+            <genero>Fantasía</genero>
+            <precio>25</precio>
+        </libro>
+        <libro>
+            <titulo>Nuevo Libro</titulo>
+            <autor>Autor Desconocido</autor>
+            <editorial>Editorial Desconocida</editorial>
+            <fecha>2024</fecha>
+            <genero>Desconocido</genero>
+            <precio>10</precio>
+        </libro>
+    </libreria>
+
+    git add 03.xml
+
+    git commit -m "Update 03 file. Add book El Silmarillion"
+
+
 22. Posicionate en la rama `main`, muestra el estado y muestra el contenido del fichero `cat 03.xml`. (Imagen visualizando comandos)
 
+![.](img/ej22.jpg)
+
 23. Realiza un merge de la rama `fea/wac02` en la rama `main`.
+```
+git checkout main
+git merge fea/wac02
+```
 24. Muestra el estado del repositorio, y muestra el contenido del fichero `03.xml`. (Imagen visualizando comandos)
+
+![.](img/ej24.jpg)
+
 25. Ahora, en la rama `main` modifica el fichero `03.xml` incluyendo un nuevo libro.
 
     ```xml
@@ -261,6 +284,12 @@ git branch -D fea/wac01
 
     Agrega al área de stage y realiza commit "Update 03 file. Add book El Hobbit".
 
+    ```
+    git checkout main
+    git add 03.xml
+    git commit -m "Update 03 file. Add book El Hobbit"
+    ```
+
 26. Agrega un nuevo fichero `04.xml` sobre libros ciencia-ficcion, en la rama `main`.
 
     ```xml
@@ -279,10 +308,42 @@ git branch -D fea/wac01
 
     Agrega al área de stage y realiza commit "Add 04 file. Add cienca-ficcion books".
 
+```
+git checkout main
+
+<?xml version="1.0" encoding="UTF-8"?>
+<libreria>
+    <libro>
+        <titulo>El fin de la eternidad</titulo>
+        <autor>Isaac Asimov</autor>
+        <editorial>Edhasa</editorial>
+        <fecha>1955</fecha>
+        <genero>Ciencia ficción</genero>
+        <precio>20</precio>
+    </libro>
+</libreria>
+
+git add 04.xml
+
+git commit -m "Add 04 file. Add ciencia-ficcion books"
+```
 27. Muestra el estado, log una línea y los ficheros que hay en el directorio. (Imagen visualizando comandos)
+
+![.](img/ej27.jpg)
+
 28. Vuelve un commit atrás, y muestra el estado, log una línea y los ficheros que hay en el directorio. (Imagen visualizando comandos)
+
+![.](img/ej28.jpg)
+
 29. Vuelve al commit anterior, y muestra el estado, log una línea y los ficheros que hay en el directorio. (Imagen visualizando comandos)
+
+![.](img/ej29.jpg)
+
 30. Posicionate de nuevo en el último commit, y muestra el estado, log una línea y los ficheros que hay en el directorio. (Imagen visualizando comandos)
+
+![.](img/ej30a.jpg)
+
+![.](img/ej30b.jpg)
 
 ### 2. Crear repositorio remoto y subir a GITHUB
 
