@@ -153,7 +153,7 @@ Este comando realiza el commit final para confirmar el merge.
 
 17. Muestra el estado del repositorio, el log, y los ficheros que hay en el directorio. (Imagen/gif visualizando los comandos).
 
-![.](img/ej17.jpg)
+![.](/img/ej17.png)
 
 
 18. Elimina la rama `fea/wac01` sin posibilidad de recuperación. ¿Qué comando/s utilizas?
@@ -172,7 +172,7 @@ git branch -D fea/wac01
 20. Muestra el estado del repositorio, el log, y los ficheros que hay en el directorio. (Imagen)
 
 
-![.](img/ej20.jpg)
+![.](/img/ej20.png)
 
 
 21. Vuelve a la rama `fea/wac02` y modifica el fichero `03.xml` añadiendo un nuevo libro.
@@ -239,7 +239,8 @@ git branch -D fea/wac01
 
 22. Posicionate en la rama `main`, muestra el estado y muestra el contenido del fichero `cat 03.xml`. (Imagen visualizando comandos)
 
-![.](img/ej22.jpg)
+![](/img/ej22.png)
+
 
 23. Realiza un merge de la rama `fea/wac02` en la rama `main`.
 ```
@@ -248,7 +249,7 @@ git merge fea/wac02
 ```
 24. Muestra el estado del repositorio, y muestra el contenido del fichero `03.xml`. (Imagen visualizando comandos)
 
-![.](img/ej24.jpg)
+![.](/img/ej24.png)
 
 25. Ahora, en la rama `main` modifica el fichero `03.xml` incluyendo un nuevo libro.
 
@@ -329,31 +330,48 @@ git commit -m "Add 04 file. Add ciencia-ficcion books"
 ```
 27. Muestra el estado, log una línea y los ficheros que hay en el directorio. (Imagen visualizando comandos)
 
-![.](img/ej27.jpg)
+![.](/img/ej27.png)
 
 28. Vuelve un commit atrás, y muestra el estado, log una línea y los ficheros que hay en el directorio. (Imagen visualizando comandos)
 
-![.](img/ej28.jpg)
+![.](/img/ej28.png)
 
 29. Vuelve al commit anterior, y muestra el estado, log una línea y los ficheros que hay en el directorio. (Imagen visualizando comandos)
 
-![.](img/ej29.jpg)
+![.](/img/ej29.png)
 
 30. Posicionate de nuevo en el último commit, y muestra el estado, log una línea y los ficheros que hay en el directorio. (Imagen visualizando comandos)
 
-![.](img/ej30a.jpg)
+![.](/img/ej30a.png)
 
-![.](img/ej30b.jpg)
+![.](/img/ej30b.png)
 
 ### 2. Crear repositorio remoto y subir a GITHUB
 
 1. Crea un repositorio remoto en GITHUB llamado `EEDD_{NombreApellido}_TE4.1` público, vacio, sin nada.
-2. Agrega el repositorio remoto a tu repositorio local. ¿Qué comando/s utilizas?
-3. Muestra los repositorios remotos que tienes configurados. ¿Qué comando/s utilizas?
-4. Sube la rama `main` al repositorio remoto. ¿Qué comando/s utilizas?
-5. Muestra el log de la rama `main` con opciones gráficas. ¿Qué comando/s utilizas?
-6. Posicionate en la rama `fea/wac02` y sube la rama `fea/wac02` al repositorio remoto. ¿Qué comando/s utilizas?
 
+
+2. Agrega el repositorio remoto a tu repositorio local. ¿Qué comando/s utilizas?
+```
+git remote add origin https://github.com/{JordanRivera}/EEDD_{JordanRivera}_TE4.1.git
+```
+3. Muestra los repositorios remotos que tienes configurados. ¿Qué comando/s utilizas?
+```
+git remote -v
+```
+4. Sube la rama `main` al repositorio remoto. ¿Qué comando/s utilizas?
+```
+git push -u origin main
+```
+5. Muestra el log de la rama `main` con opciones gráficas. ¿Qué comando/s utilizas?
+```
+git log --graph --oneline --decorate --all
+```
+6. Posicionate en la rama `fea/wac02` y sube la rama `fea/wac02` al repositorio remoto. ¿Qué comando/s utilizas?
+```
+git checkout -b fea/wac02
+git push -u origin fea/wac02
+```
 7. Ahora desde GITHUB en la rama `fea\wac02`, modifica el fichero `03.xml` añadiendo un nuevo libro.
 
    ```xml
@@ -396,17 +414,29 @@ git commit -m "Add 04 file. Add ciencia-ficcion books"
    Realiza un commit con el mensaje "Update 03 file. Add book El hombre bicentenario".
    (Muestra pantallazo de GITHUB con el commit realizado)
 
+   ![](/img/ej3#2.png)
+
 8. Ahora obten los cambios sin acualizar el repositorio local (`git fetch origin`).
 9. Muestra un log del repositorio local con opciones gráficas. (Incluye imagen)
+![](/img/ej9#2.png)
 10. Ahora actualiza el repositorio local con los cambios del repositorio remoto (`git pull origin fea/wac02`).
 11. Muestra un log del repositorio local con opciones gráficas. (Incluye imagen)
+![](/img/ej11#2.png)
 12. Haz un merge de la rama `fea/wac02` en la rama `main`. Muestra estado, log, y el contenido fichero `03.xml` (Incluye imagen)
+![](/img/ej12#2.png)
 13. Sube la rama `main` al repositorio remoto. ¿Qué comando/s utilizas?
+```
+git push origin main
+```
 14. Elimina la rama local `fea/wac02` sin posibilidad de recuperación. ¿Qué comando/s utilizas?
+```
+git branch -D fea/wac02
+```
 15. Elimina la rama remota `fea/wac02` sin posibilidad de recuperación (git push origin --delete fea/wac02).
 16. Muestra desde GITHUB las ramas que tienes el en repositorio remoto. (Incluye imagen)
+![](/img/ej17#2.png)
 17. Para finalizar, muestra el log del repositorio local con opciones gráficas. (Incluye imagen)
-
+![](/img/ej18#2.png)
 ### 3. Enlace repositorio remoto
 
 1. Incluye el enlace al repositorio remoto en este punto para que el profesor pueda acceder a él.
