@@ -414,16 +414,16 @@ git push -u origin fea/wac02
    Realiza un commit con el mensaje "Update 03 file. Add book El hombre bicentenario".
    (Muestra pantallazo de GITHUB con el commit realizado)
 
-   ![](/img/ej3#2.png)
+   ![](/img/ej3_2.png)
 
 8. Ahora obten los cambios sin acualizar el repositorio local (`git fetch origin`).
 9. Muestra un log del repositorio local con opciones gráficas. (Incluye imagen)
-![](/img/ej9#2.png)
+![](/img/ej9_2.png)
 10. Ahora actualiza el repositorio local con los cambios del repositorio remoto (`git pull origin fea/wac02`).
 11. Muestra un log del repositorio local con opciones gráficas. (Incluye imagen)
-![](/img/ej11#2.png)
+![](/img/ej11_2.png)
 12. Haz un merge de la rama `fea/wac02` en la rama `main`. Muestra estado, log, y el contenido fichero `03.xml` (Incluye imagen)
-![](/img/ej12#2.png)
+![](/img/ej12_2.png)
 13. Sube la rama `main` al repositorio remoto. ¿Qué comando/s utilizas?
 ```
 git push origin main
@@ -434,9 +434,9 @@ git branch -D fea/wac02
 ```
 15. Elimina la rama remota `fea/wac02` sin posibilidad de recuperación (git push origin --delete fea/wac02).
 16. Muestra desde GITHUB las ramas que tienes el en repositorio remoto. (Incluye imagen)
-![](/img/ej17#2.png)
+![](/img/ej17_2.png)
 17. Para finalizar, muestra el log del repositorio local con opciones gráficas. (Incluye imagen)
-![](/img/ej18#2.png)
+![.](/img/ej18_2.png)
 ### 3. Enlace repositorio remoto
 
 1. Incluye el enlace al repositorio remoto en este punto para que el profesor pueda acceder a él.
