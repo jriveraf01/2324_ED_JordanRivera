@@ -51,9 +51,14 @@ $> which java
 
     Si tienes más de una versión indica todas las versiones y rutas de instalación.
 
+![.](/img/ej1t2.png)
+    
+
 2. Variables de entorno.
 
-   📎 _Adjunta una imagen de las variables de entorno de tu sistema, tanto a nivel de usuario como a nivel de sistema._
+  ![.](/img/ej2t2.png)
+  ![.](/img/ej2at2.png)
+  ![.](/img/ej2bt2.png)
 
    - Muestra a través de interfaz (imagen) (Usuarios y sistema)
    - Muestra a nvel de comandos (imagen) (Solo usuario) (`set`)
@@ -62,16 +67,62 @@ $> which java
 3. Instala el JDK 19 la implementación de Adoptium (Windows)
 
    - Ves a la página de [Adoptium](https://adoptium.net/) y descarga la versión de Java 19 para Windows y la arquitectura de tu PC (x32/x64).
-     (Incluye un gif de la instalación)
+     ![.](/img/ej3t2.gif)
 
    - Una vez instalado, muestra la versión de Java instalada y la ruta de instalación. (a través de comandos y adjunta una imagen)
      (`java -version` y `where java`)
+     ![.](/img/ej3at2.png)
 
    - ¿ La versión de Java que te muestra es la 19? ¿ Por qué?
+   
+   No porque al descargar de su página he descargado la versión mas reciente la cuál es la 21.0.2
 
 4. Configura tu sistema para que utilice la versión de Java 19 como versión por defecto a nivel de usuario. (Si ya lo tienes explica por qué)
 
    - ¿ Cómo has configurado tu sistema para que utilice la versión de Java 19 como versión por defecto?
+
+   Por error lo hice con la versión actualizada de java que es la versión 21.0.2 pero se realizaria de la misma manera con la versión 19 solo que tendrias que descargar en la página de oracle la versión 19.
+
+   ```
+   Paso 1:
+   Instalar Java 21.0.2:
+   Descarga e instala la versión 21.0.2 de Java en tu sistema desde el sitio web oficial de Oracle o desde la fuente de tu elección.
+
+   Paso 2:
+   Configurar la variable de entorno JAVA_HOME:
+
+   ·Abre el Panel de control.
+   
+   ·Haz clic en "Sistema y seguridad" y luego en "Sistema".
+   
+   ·Haz clic en "Configuración avanzada del sistema" en el panel izquierdo.
+   
+   ·En la ventana Propiedades del sistema, ve a la pestaña "Opciones avanzadas" y haz clic en "Variables de entorno".
+   
+   ·En la sección "Variables del usuario", haz clic en "Nuevo" para agregar una nueva variable de entorno.
+   
+   ·Ingresa JAVA_HOME como nombre de la variable y la ruta de instalación de Java 21.0.2 como valor. Por ejemplo, C:\Program Files\Java\jdk-21.0.2.
+   
+   ·Haz clic en "Aceptar" para guardar la variable de entorno.
+   
+   Paso3:
+   Actualizar la variable PATH:
+
+   ·En la misma ventana de "Variables de entorno", busca la variable PATH en la sección "Variables del usuario" y selecciónala.
+   
+   ·Haz clic en "Editar".
+   
+   ·En la ventana Editar variable de entorno, haz clic en "Nuevo" y agrega la ruta al directorio bin de Java 21.0.2. Por ejemplo, C:\Program Files\Java\jdk-21.0.2\bin.
+   
+   ·Haz clic en "Aceptar" para guardar los cambios.
+   
+   ·Verificar la configuración:
+
+   Abre una nueva ventana del símbolo del sistema (CMD) y escribe java -version. Deberías ver que se utiliza la versión 21.0.2 de Java.
+   
+   
+   Siguiendo estos pasos, has configurado la versión 21.0.2 de Java como la versión por defecto a nivel de usuario en tu sistema Windows.
+   ```
 
 ### 2. Utilización de SDKMan
 
@@ -79,51 +130,94 @@ $> which java
 
    - Instala SDKMan en Windows e explica los pasos que has seguido, adjunta una captura final de SDK funcionando.
 
+      Lo he descargado mediante el codigo que te ofrece la página de SDKMan el cuál debes de usar en la aplicación de Git Bash.
+      
    - Muestra la versión de SDKMan instalada
+
+      ![.](/img/ej1p2t2.png)
 
    - ¿ Dónde se ha instalado SDKMan? ¿ Por qué?
 
+      ![.](/img/ej1ap2t2.png)
+
    - Muestra las versiones de Java que tienes instaladas a través de SDKMan
+
+      ![.](/img/ej1bp2t2.png)
 
    - ¿ Qué ventajas tiene instalar SDKMan?
 
+      Descargar SDKMan simplifica la gestión de las herramientas de desarrollo de software, proporcionando un medio eficaz para instalar, gestionar y cambiar entre múltiples versiones de SDK en diferentes entornos de desarrollo.
+
    - ¿ Instala la versión de Jara 8.0_302-zulu a través de SDKMan ?
+
+      ![.](/img/ej1cp2t2.png)
 
    - ¿ Instala la versión de Java 11.0.12-zulu a través de SDKMan ?
 
+      ![.](/img/ej1dp2t2.png)
+
    - ¿ Instala la versión de Java 17.0.0-zulu a través de SDKMan ?
+
+      ![.](/img/ej1ep2t2.png)
+
+
 
 6. Configura tu sistema para que utilice la versión de Java 17.0.0 como versión por defecto a nivel de usuario. (Para que las aplicaciones que ejecutes utilicen esta versión de Java)
 
    - ¿ Qué tienes hacer o comando tienes que utilizar (SDKMAN) para que una aplicación ejecutada desde la interfaz (Windows o Linux) utilize esa versión de Java?
 
+      -sdk use java 17.0.0-zulu
+
+
+
    - ¿ Qué variable de Entorno tienes que modificar para que una aplicación ejecutada desde la interfaz (Windows o Linux) utilize esa versión de Java?
+
+      -JAVA_HOME
 
 7. Si necesitas compilar una aplicación de Java desde la terminal, fuera del IDE, y necesita compilarse con la version de Java 8, ¿ Cómo lo harías?
 
    - ¿ Qué comando de SDKMAN tienes que utilizar para que a nivel de la terminal actual use la versión de Java 8?
 
+      -sdk use java 8.0.302-zulu
+
+
    - ¿ Qué comando utilizas para compilar una aplicación de Java ?
 
-8. Un proyecto en el que estas trabajando, neceseita la versión de Java 11, pero requieres compilarlo con esa versión, pero no quieres tener siempre que recordar esto, y quieres que se active automáticamente esa versión una vez accedas al directorio del proyecto.
+      -El comando javac y el nombre de la App estilo:
+      javac MiAplicacion.java
+
+8. Un proyecto en el que estas trabajando, necesita la versión de Java 11, pero requieres compilarlo con esa versión, pero no quieres tener siempre que recordar esto, y quieres que se active automáticamente esa versión una vez accedas al directorio del proyecto.
 
    - ¿ Cómo puedes realizar esto con SDKMAN ? (indica los comandos que tienes que utilizar y la configuración de la herramienta)
 
+      Debes de realizar un archivo dentro de tu proyecto con el nombre de .sdkmanrc y en el debes de utilizar el comando de: sdk use java 11.0.12-zulu
+
    - Haz una captura de pantalla entrando y saliendo del directorio del proyecto, para ver cono se activa y desactiva una versión y otra de Java.
+
+      ![.](/img/ej8t2.png)
+
+
 
 9. Ahora en Eclipse, configura el JDK 17 descargado con SDKMAN, como JDK por defecto.
 
    - ¿ Cómo has configurado Eclipse para que utilice el JDK 17 descargado con SDKMAN? (Muestra una captura de pantalla)
 
+      ![.](/img/ej9t2.png)
+
    - Inicia un nuevo proyecto (TE21-Paso9) en Eclipse y muestra la versión de Java que aparece por defecto para el Workspace. (Muestra una captura de pantalla)
 
+      ![.](/img/ej9at2.png)
+      ![.](/img/ej9bt2.png)
+
    - Cambia la versión de Java del proyecto para que utilize la versión de Java 8. (Muestra una captura de pantalla)
+
+   ![.](/img/ej9ct2.png)
 
 ### 3. Utilización de JetBrains IntelliJ IDEA y Eclipse
 
 10. Crea un nuevo proyecto en IntelliJ IDEA (TE21-Paso10) y configura en ese directorio, con SDKMAN para que utilize la versión de Java 11.
 
-- Ahora al abrir IntellJ IDEA, debe activar esa versión automaticamente, pues detectar la configuración. (Incluye una captura de panntalla o GIF de la configuración))
+- Ahora al abrir IntellJ IDEA, debe activar esa versión automaticamente, pues detectar la configuración. (Incluye una captura de pantalla o GIF de la configuración)
 
 11. Importar el proyecto TE21-Paso9 en IntelliJ IDEA que has creado en Eclipse.
 
