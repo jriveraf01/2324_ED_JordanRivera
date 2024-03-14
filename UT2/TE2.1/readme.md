@@ -219,29 +219,40 @@ $> which java
 
 - Ahora al abrir IntellJ IDEA, debe activar esa versión automaticamente, pues detectar la configuración. (Incluye una captura de pantalla o GIF de la configuración)
 
+   Debes de pulsar depués de haber creado el proyecto la teclas Alt+Control+Shift+S y se te abrirá lo siguiente:
+   ![.](/img/ej10t2.png)
+   Aqui solo debes de seleccionar la versión de java que necesites en este caso la 11.
+
 11. Importar el proyecto TE21-Paso9 en IntelliJ IDEA que has creado en Eclipse.
 
 - Revisa la configuración de la versión de Java que utiliza el proyecto ¿Es la misma que utiliza Eclipse?. (Muestra una captura de pantalla)
-  Explica según tu opinión y en base a la configuración aplicada al proyecto de Eclipse realizada en el paso 9, si debe ser la misma versión de JDK en ambos proyectos o si esto depende de otras configuraciones extenas al proyecto.
 
+   ![.](/img/ej10t2.png)
+   ![.](/img/ej11t2.png)
+  Explica según tu opinión y en base a la configuración aplicada al proyecto de Eclipse realizada en el paso 9, si debe ser la misma versión de JDK en ambos proyectos o si esto depende de otras configuraciones extenas al proyecto.
+   ````
+   En mi poinión si las versiones de Java son compatibles y no hay restricciones específicas del proyecto, utilizar la misma versión en ambos entornos puede simplificar el desarrollo y garantizar la consistencia. Sin embargo, la elección final depende de los requisitos del proyecto y las consideraciones de compatibilidad.
+   ````
 12. Crea un nuevo proyecto en IntelliJ IDEA (TE21-Paso12) que se guarde en la carpeta TE21-Paso12.
 
 - Configura el proyecto para que utilice la versión de Java 17 descargada con SDKMAN. (Muestra una captura de pantalla de la configuración del fichero .sdkmanrc)
 - Agrega otro módulo al proyecto, que se guarde en la carpeta Modulo2.
 - Agrega otro módulo al proyecto, que se guarde en la carpeta Modulo3.
 
-(Muestra una captura de pantalla de la estructura del proyecto en IntelliJ IDEA)
+   ![.](/img/ej12t2.png)
 
-- Vincula el proyecto principal, con los módulos 2 y 3. (Muestra una captura de pantalla de la configuración de los módulos)
+- Vincula el proyecto principal, con los módulos 2 y 3. 
 
 13. En el módulo 2, crea una clase que se llame `Utilidades` y que tenga un método que se llame `calculadora` y que tenga los métodos de suma, resta, multiplicación y división.
 
-(Muestra el código de la clase `Utilidades` con un bloque de código)
+   ![.](/img/ej13t2.png)
 
 14. En el módulo 3, crea una clase llamada `Conversor` que tenga un método que se llame `Texto_to_Uppercase` que convierta un texto a mayúsculas, y otro método que se llame `Texto_to_Lowercase` que convierta un texto a minúsculas.
 
-(Muestra el código de la clase `Conversor` con un bloque de código)
+   ![.](/img/ej14t2.png)
 
 15. En el módulo principal, crea una clase llamada `Principal` que tenga un método `main` que instancie las clases `Utilidades` y `Conversor` y que muestre por consola el resultado de las operaciones de la clase `Utilidades` y el resultado de las operaciones de la clase `Conversor`.
 
 (Muestra un gif donde se muestre la ejecución del programa, en depuración y se visualice que no existen errores de compilación ni ejecución).
+
+   ![.](/img/ej15t2.gif)
