@@ -26,4 +26,4 @@ Al hacer el coverage inicial me he dado cuenta de que me da el coverage que nece
 ## Ejercicio 3.2.2. Cobertura de Ramas
 
 
-![GIF de Cobertura de Ramas](coveragefinal.png)
+![GIF de Cobertura de Ramas](coveragefinall.gif)
